@@ -20,7 +20,7 @@ body {
     height: 70px;
     color: #fff;
     border-bottom: 10px solid #474747;
-    z-index: 3;
+    z-index: 5;
 }
 
 .logo {
@@ -30,30 +30,43 @@ body {
     height: 40px;
 }
 
-#still {
-    padding: 30px;
-    width: 100%;
-    margin-top: 60px;
-    height: 700px;
+#timelapse {
     position: fixed;
-    background-color: aquamarine;
-    font-family: "Inter", sans-serif;
-    background-image: url(img/teelight2.png), url(img/teedark2.png), url(img/timelapse.png);
-    background-position: left center, left center, left top;
-    background-repeat: no-repeat, no-repeat, no-repeat;
-    background-size: 700px 500px, 670px 550px, 100% auto;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
     z-index: 1;
 }
 
-.scrolls {
+#still {
+    padding: 40px;
+    width: 100%;
+    margin-top: -250px;
+    height: 700px;
+    position: fixed;
+    background-color: transparent;
+    font-family: "Inter", sans-serif;
+    background-image: url(img/teelight2.png), url(img/teedark2.png);
+    background-position: left top, left top;
+    background-repeat: no-repeat, no-repeat;
+    background-size: 700px 500px, 670px 550px;
     z-index: 2;
+}
+
+.scrolls {
+    z-index: 3;
     position: relative;
+    margin-bottom: 190px;
 }
 
 .scrolls img {
     margin-top: -220px;
     margin-left: 170px;
     float: left;
+    position: relative;
 }
 
 h2 {
@@ -65,15 +78,29 @@ h2 {
 }
 
 h3 {
+    position: relative;
     font-family: "Cochin", Georgia, serif, sans-serif;
     font-size: 30px;
-    text-decoration: overline;
     background-color: #c997ceed;
-    margin-right: 500px;
-    margin-left: 800px;
+    /* margin-right: 800px;
+    margin-left: 500px; */
     height: 50px;
-    margin-top: -100;
+    width: 100px;
+    left: 500px;
+    bottom: 40px;
+    color: "black";
     text-align: center;
+    z-index: 3;
+}
+
+h3:hover {
+    background-color: rgba(0, 255, 255, 0.65);
+    cursor: pointer;
+    color: #000;
+}
+
+a:link a:visited a:hover a:active {
+    color: "black";
 }
 
 .text {
