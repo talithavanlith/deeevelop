@@ -78,18 +78,10 @@ h2 {
 }
 
 h3 {
-    position: relative;
     font-family: "Cochin", Georgia, serif, sans-serif;
     font-size: 30px;
     background-color: #c997ceed;
-    /* margin-right: 800px;
-    margin-left: 500px; */
-    height: 50px;
-    width: 100px;
-    left: 500px;
-    bottom: 40px;
     color: "black";
-    text-align: center;
     z-index: 3;
 }
 
@@ -103,6 +95,98 @@ a:link a:visited a:hover a:active {
     color: "black";
 }
 
-.text {
-    margin-left: -70;
+
+/* #region hamburger menu */
+
+.header .menu {
+    background-color: #474747;
+    width: 150px;
+    clear: both;
+    height: 0;
+    transition: height 0.2s ease-out;
+    z-index: 0;
 }
+
+.header ul {
+    margin-top: 80px;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    width: auto;
+    cursor: pointer;
+}
+
+.header ul a {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    color: aqua;
+    font-weight: 400;
+}
+
+.header .menu-icon {
+    padding: 20px 30px;
+    position: relative;
+    float: left;
+    cursor: pointer;
+    z-index: 5;
+}
+
+.header .menu-icon .nav-icon {
+    background: #875fa4;
+    display: block;
+    height: 3px;
+    width: 20px;
+    position: relative;
+    transition: background 0.2s ease-out;
+}
+
+.header .menu-icon .nav-icon:before {
+    background: #875fa4;
+    content: "";
+    display: block;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    transition: all 0.2s ease-out;
+    top: 7px;
+}
+
+.header .menu-icon .nav-icon:after {
+    background: #875fa4;
+    content: "";
+    display: block;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    top: -7px;
+    transition: all 0.2s ease-out;
+}
+
+
+/* menu-btn ads the animation of the icon when clicked */
+
+.header .menu-btn {
+    display: none;
+}
+
+.header .menu-btn:checked~.menu {
+    height: 100px;
+}
+
+.header .menu-btn:checked~.menu-icon .nav-icon {
+    background: transparent;
+}
+
+.header .menu-btn:checked~.menu-icon .nav-icon::before {
+    transform: rotate(-45deg);
+    top: 0;
+}
+
+.header .menu-btn:checked~.menu-icon .nav-icon:after {
+    transform: rotate(45deg);
+    top: 0;
+}
+
+
+/* #endregion */
