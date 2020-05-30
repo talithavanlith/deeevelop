@@ -4,20 +4,25 @@
 <head>
     <meta charset="UT-8" />
     <title>DEEEV</title>
-    <link rel="stylesheet" href="style.css" type="text/css" />
+    <link rel="stylesheet" href="style2.css" type="text/css" />
 </head>
 
 <body>
     <!-- Start of page header -->
     <header class="header">
-        <figure>
+        <!-- <figure>
             <img class="logo" src="./img/logo-1.png" alt="Deeevelop logo">
-        </figure>
+        </figure> -->
+        <!-- below screws up menu layout but unsure why -->
+        <h1 class="logo">DEEEV DESIGNS</h1>
         <input class="menu-btn" type="checkbox" id="menu-btn" />
+        <label class="menu-icon" for="menu-btn">
+          <span class="nav-icon"></span>
+        </label>
         <ul class="menu">
-            <li class="button"><a class="active"> home </a>
+            <li><a href="./index.html"> home </a>
             </li>
-            <li class="button"><a href="./.html">about</a>
+            <li><a href="./.html">about</a>
             </li>
         </ul>
     </header>
@@ -25,35 +30,42 @@
 
     <section>
 
+        <div id="still">
+        </div>
         <!-- The video -->
         <video autoplay muted loop id="timelapse">
             <source src="timelaspe.mp4" type="video/mp4">
         </video>
 
         <div class="scrolls">
-            <img src="img/tee1.png" alt="first t-shirt option" class="tee" width="480" height="470" />
+            <img src="img/tee4.png" alt="first t-shirt option" class="tee" width="480" height="470" />
             <div class="text">
                 <h2>$40.0</h2>
-                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" id="sizes">
                     <input type="hidden" name="cmd" value="_s-xclick">
                     <input type="hidden" name="hosted_button_id" value="654EADQP4PHX6">
-                    <table>
-                        <tr>
-                            <td><input type="hidden" name="on0" value="Sizes">Sizes</td>
-                        </tr>
-                        <tr>
-                            <td><select name="os0">
+                    <tr>
+                        <td><input type="hidden" name="on0" value="Sizes"></td>
+                    </tr>
+
+                    <tr style="width:200px;">
+                        <td><select name="os0">
                         <option value="S">S </option>
                         <option value="M">M </option>
                         <option value="L">L </option>
+                        <option value="L">XL </option>
+                        <option value="L">XXL </option>
                     </select> </td>
-                        </tr>
+                    </tr>
                     </table>
-                    <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-                    <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
                 </form>
+                <div id="buyBtn">
+                    <input type="submit" name="submit" value="" alt="PayPal - The safer, easier way to pay online!">
+                    <img src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/cc-badges-ppmcvdam.png" alt="available payment options" id="paymentOptions" width="190" height="25" />
+                </div>
             </div>
         </div>
+
 
 
     </section>
