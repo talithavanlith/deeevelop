@@ -1,3 +1,13 @@
+@font-face {
+    font-family: "zai";
+    src: url(./fonts/zai_PencilTypewriter.ttf);
+}
+
+@font-face {
+    font-family: "vogue";
+    src: url(./fonts/Vogue.ttf);
+}
+
 html {
     margin: 0;
     padding: 0;
@@ -47,6 +57,7 @@ body {
     padding: 0;
     list-style: none;
     overflow: hidden;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     width: auto;
     cursor: pointer;
 }
@@ -144,7 +155,6 @@ body {
     height: 700px;
     position: fixed;
     background-color: transparent;
-    font-family: "Inter", sans-serif;
     background-image: url(img/teelight2.png), url(img/teedark2.png);
     background-position: left top, left top;
     background-repeat: no-repeat, no-repeat;
@@ -158,7 +168,7 @@ body {
     margin-bottom: 190px;
 }
 
-.scrolls img {
+.tee {
     margin-top: -220px;
     margin-left: 170px;
     float: left;
@@ -175,29 +185,85 @@ h2 {
     margin-left: 200px;
 }
 
-h3 {
-    font-family: "Cochin", Georgia, serif, sans-serif;
+.buy {
+    font-family: "zai", Georgia, serif, sans-serif;
     font-size: 35px;
     background-color: #c997ceed;
     color: black;
     z-index: 3;
     margin-top: 0;
+    padding: 3px;
 }
 
 p {
     font-size: 30px;
+    background-color: aqua;
+    font-family: "vogue", Georgia, 'Times New Roman', Times, serif;
 }
 
-h3:hover {
+h3 a:hover {
     background-color: rgba(0, 255, 255, 0.65);
     cursor: pointer;
     color: #000;
 }
 
-a {
+input[type=submit] {
     color: black;
+    box-shadow: inset 0 0 2px 0 rgba(255, 255, 255, .4), inset 0 0 3px 0 rgba(0, 0, 0, .4), inset 0 0 3px 5px rgba(0, 0, 0, .05), 2px 2px 4px 0 rgba(0, 0, 0, .25);
+    cursor: pointer;
+    height: 58px;
+    margin: 4px 2px;
+    border: none;
+    width: 190px;
+    font-family: "vogue", Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    border-radius: 4px;
+    background-color: rgba(0, 255, 255, 0.85);
+    background-image: url(https://www.paypalobjects.com/webstatic/en_US/i/buttons/PP_logo_h_150x38.png);
+    background-position: 20px 10px;
+    background-repeat: no-repeat;
+    background-size: 150px 38px;
 }
 
-.text {
-    margin-left: 500px;
+input[type=submit]:before,
+input[type=submit]:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 2px;
+    right: 2px;
+    height: 3px;
+}
+
+input[type=submit]:before {
+    top: 0;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    background: rgba(255, 255, 255, .6);
+    box-shadow: 0 1px 2px 0 rgba(255, 255, 255, .6);
+}
+
+input[type=submit]:after {
+    bottom: 0;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    background: rgba(0, 0, 0, .15);
+    box-shadow: 0 -1px 2px 0 rgba(0, 0, 0, .15);
+}
+
+#paymentOptions {
+    margin: 0;
+    display: block;
+}
+
+#buyBtn {
+    float: left;
+}
+
+#sizes {
+    float: left;
+}
+
+table {
+    float: left;
 }
